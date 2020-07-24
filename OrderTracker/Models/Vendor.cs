@@ -10,8 +10,6 @@
     public string VendorAddress { get; set; }
     public int Id { get; }
   
-
-
     public Vendor(string vendorName, string vendorAddress) 
     {
       VendorName = vendorName;
@@ -24,6 +22,12 @@
     {
       _instances.Clear();
     }
+
+      public static List<Vendor> GetAllVendors()
+    {
+      return _instances;
+    }
+
 
   } 
 }
