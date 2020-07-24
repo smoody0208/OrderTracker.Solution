@@ -30,7 +30,7 @@ namespace OrderTracker.Tests
       int price = 1000;
       Order newOrder = new Order(typeOfBread, quantity, date, price);
       string result = newOrder.TypeOfBread;
-      Assert.AreEqual(typeOfBread1, result);
+      Assert.AreEqual(typeOfBread, result);
     }
     
   }
