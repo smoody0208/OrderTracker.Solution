@@ -43,7 +43,7 @@ namespace OrderTracker.Tests
 
       string result = newVendor.VendorAddress;
 
-      Assert.AreEqual(vendorAddress, result);
+      Assert.AreEqual(vendorAddress2, result);
 
     }
   }
