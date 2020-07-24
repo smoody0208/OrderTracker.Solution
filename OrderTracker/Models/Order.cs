@@ -31,5 +31,10 @@ namespace OrderTracker.Models
       return _instances;
     }
 
+    public static Order Find(int searchId)
+    {
+      return _instances[searchId-1];
+    }
+
   }  
 }  
