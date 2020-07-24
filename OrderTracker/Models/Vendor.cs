@@ -17,6 +17,13 @@
       VendorName = vendorName;
       VendorAddress = vendorAddress;
       Id = _instances.Count;
+      _instances.Add(this);
     }
-  }  
+
+      public static void ClearAll()
+    {
+      _instances.Clear();
+    }
+
+  } 
 }
