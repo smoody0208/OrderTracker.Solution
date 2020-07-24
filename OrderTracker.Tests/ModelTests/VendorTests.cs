@@ -91,7 +91,7 @@ namespace OrderTracker.Tests
       Vendor newVendor = new Vendor (vendorName, vendorAddress);
       Vendor newVendor2 = new Vendor (vendorName2, vendorAddress2);
 
-      Vendor result = Vendor.Find(1);
+      Vendor result = Vendor.Find(2);
 
       Assert.AreEqual(newVendor2, result);
     }
