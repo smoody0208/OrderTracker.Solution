@@ -1,16 +1,18 @@
+using OrderTracker.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Calendar;
+using System.Collections.Generic;
+using System;
 
-namespace Calendar.Tests
+namespace OrderTracker.Tests
 {
   [TestClass]
-  public class LeapYearTests
+  public class VendorTest
   {
     [TestMethod]
-    public void IsLeapYear_NumberDivisibleByFour_True()
+    public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
-      LeapYear testLeapYear = new LeapYear();
-      Assert.AreEqual(true, testLeapYear.IsLeapYear(2012));
+      Vendor newVendor = new Vendor("Some Vendor Test", "Some Address Test");
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
   }
 }
