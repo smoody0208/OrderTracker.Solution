@@ -16,7 +16,7 @@ namespace OrderTracker.Tests
     }
 
     [TestMethod]
-    public void GetNameAndAddress_ReturnsNameAndAddress_String()
+    public void GetName_ReturnsName_String()
     {
       string vendorAddress = "P. Sherman, 42 Wallaby Way, Sydney";
       string vendorName = "Finding Nemo";
@@ -28,6 +28,22 @@ namespace OrderTracker.Tests
       string result = newVendor.VendorName;
 
       Assert.AreEqual(vendorName2, result);
+
+    }
+
+    [TestMethod]
+    public void GetAddress_ReturnsAddress_String()
+    {
+      string vendorAddress = "P. Sherman, 42 Wallaby Way, Sydney";
+      string vendorName = "Finding Nemo";
+      string vendorAddress2 = "123 Why Worry Lane";
+      string vendorName2 = "It's All Good Bakery";
+      Vendor newVendor2 = new Vendor (vendorName, vendorAddress);
+      Vendor newVendor = new Vendor (vendorName2, vendorAddress2);
+
+      string result = newVendor.VendorAddress;
+
+      Assert.AreEqual(vendorAddress, result);
 
     }
   }
