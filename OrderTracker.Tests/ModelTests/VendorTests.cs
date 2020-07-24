@@ -28,7 +28,6 @@ namespace OrderTracker.Tests
       string result = newVendor.VendorName;
 
       Assert.AreEqual(vendorName2, result);
-
     }
 
     [TestMethod]
@@ -44,7 +43,21 @@ namespace OrderTracker.Tests
       string result = newVendor.VendorAddress;
 
       Assert.AreEqual(vendorAddress2, result);
+    }
 
+    [TestMethod]
+    public void GetId_ReturnsVendorId_int()
+    {
+      string vendorAddress = "P. Sherman, 42 Wallaby Way, Sydney";
+      string vendorName = "Finding Nemo";
+      string vendorAddress2 = "123 Why Worry Lane";
+      string vendorName2 = "It's All Good Bakery";
+      Vendor newVendor = new Vendor (vendorName, vendorAddress);
+      Vendor newVendor2 = new Vendor (vendorName2, vendorAddress2);
+
+      int result = newVendor2.Id;
+
+      Assert.AreEqual(1, result);
     }
   }
 }
