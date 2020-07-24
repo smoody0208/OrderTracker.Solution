@@ -1,6 +1,6 @@
 @using OrderTracker.Models;
 
-<h3>Here are all the orders for @Model["vendor"]:</h3>
+<h3>Here are all the orders for @Model["vendor"].VendorName:</h3>
 
 <ol>
 @foreach (Order order in @Model["orders"])
