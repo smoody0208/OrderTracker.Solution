@@ -68,7 +68,6 @@ namespace OrderTracker.Tests
     [TestMethod]
     public void GetAll_ReturnsAllVendorObjects_VendorList()
     {
-      //Arrange
       string vendorAddress = "P. Sherman, 42 Wallaby Way, Sydney";
       string vendorName = "Finding Nemo";
       string vendorAddress2 = "123 Why Worry Lane";
@@ -77,11 +76,24 @@ namespace OrderTracker.Tests
       Vendor newVendor2 = new Vendor (vendorName2, vendorAddress2);
       List<Vendor> newList = new List<Vendor> { newVendor, newVendor2 };
 
-      //Act
       List<Vendor> result = Vendor.GetAllVendors();
 
-      //Assert
       CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      string vendorAddress = "P. Sherman, 42 Wallaby Way, Sydney";
+      string vendorName = "Finding Nemo";
+      string vendorAddress2 = "123 Why Worry Lane";
+      string vendorName2 = "It's All Good Bakery";
+      Vendor newVendor = new Vendor (vendorName, vendorAddress);
+      Vendor newVendor2 = new Vendor (vendorName2, vendorAddress2);
+
+      Vendor result = Vendor.Find(1);
+
+      Assert.AreEqual(newVendor2, result);
     }
 
   }
