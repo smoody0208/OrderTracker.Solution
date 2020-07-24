@@ -96,5 +96,23 @@ namespace OrderTracker.Tests
       Assert.AreEqual(newVendor2, result);
     }
 
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      string typeOfBread = "Roll";
+      int quantity = 10;
+      int date = 7/30/20;
+      int price = 5;
+      Order newOrder = new Order(typeOfBread, quantity, date, price);
+      List<Order> newOrderList = new List<Order> { newOrder };
+      string vendorAddress = "P. Sherman, 42 Wallaby Way, Sydney";
+      string vendorName = "Finding Nemo";
+      Vendor newVendor = new Vendor (vendorName, vendorAddress);
+      newVendor.AddOrder(newOrder);
+
+      List<Order> result = newVendor.Orders;
+
+      CollectionAssert.AreEqual(newOrderList, result);
+    }
   }
 }

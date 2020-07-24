@@ -1,8 +1,24 @@
-  namespace FriendLetter.Models
+using System.Collections.Generic;
+
+namespace OrderTracker.Models
 {
-  public class LetterVariable
+  public class Order
   {
-    public string Recipient { get; set; }
-    public string Sender { get; set; }
-  }
-}
+    public string TypeOfBread { get; set; }
+    public int Quantity { get; set; }
+    public int Date { get; set; }
+    public int Price { get; set; }
+    public int Id { get; }
+    private static List<Order> _instances = new List<Order>{};
+
+    public Order(string typeOfBread, int quantity, int date, int price)
+    {
+      TypeOfBread = typeOfBread;
+      Quantity = quantity;
+      Date = date;
+      Price = price;
+      _instances.Add(this);
+      Id = _instances.Count;
+    }
+  }  
+}  

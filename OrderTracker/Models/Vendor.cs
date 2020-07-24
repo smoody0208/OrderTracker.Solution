@@ -1,4 +1,5 @@
   using System.Collections.Generic;
+  using OrderTracker.Models;
 
   namespace OrderTracker.Models
 {
@@ -9,6 +10,7 @@
     public string VendorName { get; set; }
     public string VendorAddress { get; set; }
     public int Id { get; }
+    public List<Order> Orders { get; set; }
   
     public Vendor(string vendorName, string vendorAddress) 
     {
@@ -16,21 +18,27 @@
       VendorAddress = vendorAddress;
       Id = _instances.Count;
       _instances.Add(this);
+      Orders = new List<Order>{};
     }
 
-      public static void ClearAll()
+    public static void ClearAll()
     {
       _instances.Clear();
     }
 
-      public static List<Vendor> GetAllVendors()
+    public static List<Vendor> GetAllVendors()
     {
       return _instances;
     }
 
-      public static Vendor Find(int searchId)
+    public static Vendor Find(int searchId)
     {
       return _instances[searchId -1];
+    }
+
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
     }
   } 
 }
