@@ -32,6 +32,26 @@ namespace OrderTracker.Tests
       string result = newOrder.TypeOfBread;
       Assert.AreEqual(typeOfBread, result);
     }
+
+    [TestMethod]
+    public void GetAllOrders_ReturnsOrders_OrderList()
+    {
+      string typeOfBread = "Banana Bread";
+      int quantity = 10;
+      int date = 10/10/10;
+      int price = 1000;
+      string typeOfBread1 = "Not a banana bread";
+      int quantity1 = 20;
+      int date1 = 11/11/11;
+      int price1 = 1111;
+      Order newOrder = new Order(typeOfBread, quantity, date, price);
+      Order newOrder2 = new Order(typeOfBread1, quantity1, date1, price1);
+      List<Order> newOrderList = new List<Order> { newOrder, newOrder2 };
+
+      List<Order> result = Order.GetAllOrders();
+
+      CollectionAssert.AreEqual(newOrderList, result);
+    }
     
   }
 }    

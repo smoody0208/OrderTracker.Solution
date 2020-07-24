@@ -26,5 +26,10 @@ namespace OrderTracker.Models
       _instances.Clear();
     }
 
+    public static List<Order> GetAllOrders()
+    {
+      return _instances;
+    }
+
   }  
 }  
