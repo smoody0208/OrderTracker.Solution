@@ -52,6 +52,20 @@ namespace OrderTracker.Tests
 
       CollectionAssert.AreEqual(newOrderList, result);
     }
+
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      string typeOfBread = "Banana Bread";
+      int quantity = 10;
+      int date = 10/10/10;
+      int price = 1000;
+      Order newOrder = new Order(typeOfBread, quantity, date, price);
+
+      int result = newOrder.Id;
+
+      Assert.AreEqual(1, result);
+    }
     
   }
 }    
