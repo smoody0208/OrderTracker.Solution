@@ -2,17 +2,17 @@
   Layout = "_Layout";
 }
 @using OrderTracker.Models;
-<h1>Add a New Vendor!</h1>
-<br>
-<form action="/vendors" method="post">
-  <label for="vendorName">Vendor Name:</label>
-  <input id="vendorName" name="vendorName" type="text" placeholder="Please Enter Vendors Name" required>
+<div class="container">
+  <h1>Add a New Vendor!</h1>
   <br>
-  <label for="vendorAddress">Address</label>
-  <input id="vendorAddress" name="vendorAddress" type="text" placeholder="Please Enter Vendors Address" required>
+  <form action="/vendors" method="post">
+    <label for="vendorName">Vendor Name:</label>
+    <input id="vendorName" name="vendorName" class="form-control" type="text" placeholder="Please Enter Vendors Name" required>
+    <br>
+    <label for="vendorAddress">Address</label>
+    <input id="vendorAddress" name="vendorAddress" class="form-control" type="text" placeholder="Please Enter Vendors Address" required>
+    <br>
+    <button class="btn btn-danger" type="submit">Add</button>
+  </form>
   <br>
-  <button class="btn" type="submit">Add</button>
-</form>
-<br>
-<button class="btn"><a href="/">Home</a></button>
-<button class="btn"><a href="/vendors">View Vendor List</a></button>
+</div>  

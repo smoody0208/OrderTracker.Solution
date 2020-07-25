@@ -2,16 +2,15 @@
   Layout = "_Layout";
 }
 @using OrderTracker.Models;
+<div class="container">
+  <h3>Here are all the orders for @Model["vendor"].VendorName:</h3>
 
-<h3>Here are all the orders for @Model["vendor"].VendorName:</h3>
+  <ol>
+  @foreach (Order order in @Model["order"])
+  {
+    <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.TypeOfBread</a></li>
+  }
+  </ol>
 
-<ol>
-@foreach (Order order in @Model["order"])
-{
-  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.TypeOfBread</a></li>
-}
-</ol>
-
-<button class="btn"><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></button>
-<button class="btn"><a href="/">Home</a></button>
-<button class="btn"><a href="/vendors">View Vendor List</a></button>
+  <button class="btn btn-danger"><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></button>
+</div>  

@@ -3,17 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>My Super Awesome Site!</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <br>
-  <div id="navBar">
-    <div class="nav nav-tabs">
-      <center><a href="/">Home</a>
-      <a href="/vendors">Vendors</a></li>
-      <a href='/vendors/new'>New Vendor</a></li></center>
-  </div>
-</div>
+  <nav class="navbar navbar-expand-lg fixed-top">
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item">
+                <a href="/" class="nav-link smoothScroll">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="/vendors" class="nav-link smoothScroll">View Vendors</a>
+            </li>
+            <li class="nav-item">
+                <a href="/vendors/new" class="nav-link smoothScroll">Add Vendor</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   <body>
     @RenderBody()
   </body>
