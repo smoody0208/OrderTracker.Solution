@@ -11,22 +11,30 @@ This application will allow the user to submit a list of vendors which each cont
 
 1. **Behavior:** The user is welcomed with a splash page and given the option to add a new vendor.
     * **Input Example:** "Add a new vendor"
-    * **Output Example:** "/vendors/new"
+    * **Output Example:** /vendors/new
 
-2. **Behavior:** The program will allow the user to view the created vendor/all vendors.
-    * **Input Example:** "View vendors"
-    * **Output Example:** /vendors/show
+2. **Behavior:** The program will allow the user to add a new vendors name/address.
+    * **Input Example:** "Add vendors"
+    * **Output Example:** /vendors
 
-2. **Behavior:** The program will ask the user to add an order/details to the selected vendor.
-    * **Input Example:** "Add order to this vendor"
-    * **Output Example:** /vendors/{order}
+3. **Behavior:** The program will allow the user to view orders for that vendor.
+* **Input Example:** "Click on vendor name"
+* **Output Example:** /vendors/{vendorid}
 
-3. **Behavior:** The program will allow the user to delete existing orders.
-    * **Input Example:** "Delete orders"
-    * **Output Example:** /orders/delete
+4. **Behavior:** The program will allow the user to add an order for that Vendor.
+* **Input Example:** "Add a new order"
+* **Output Example:** /vendors/{vendorid}/orders/new
 
-3. **Behavior:** The program will allow the user to delete existing vendors.
-    * **Input Example:** "Delete vendors"
+5. **Behavior:** The user will enter in details about the order.
+* **Input Example:** "Add order for 'vendor'"
+* **Output Example:** /vendors/{vendorid}/orders
+
+6. **Behavior:** The program will allow the user view details about an order.
+    * **Input Example:** "Click on order name"
+    * **Output Example:** /vendors/{vendorid}/orders/{orderid}
+
+7. **Behavior:** The program will allow the user to delete existing vendors.
+    * **Input Example:** "Clear Vendors"
     * **Output Example:** /vendors/delete
 
 ## Setup and Installation
