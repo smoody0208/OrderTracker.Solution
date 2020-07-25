@@ -1,13 +1,13 @@
   body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: black;
+  background-color: burlywood;
 }
 
 .container {
   margin-top: 5%;
   margin-bottom: 5%;
   padding: 5%;
-  background-color: rgba(245, 245, 245, 0.74);
   border: solid 1px #343a40;
   border-radius: 10px;
 }
