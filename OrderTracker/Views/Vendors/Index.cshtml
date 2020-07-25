@@ -10,10 +10,13 @@
   {
     <p>You currently have no vendors!</p>
   }
-
-  @foreach (Vendor vendor in Model)
-  {
-    <h3><a href="/vendors/@vendor.Id">@vendor.VendorName</a></h3>
-  }
+  <ul>
+    @foreach (Vendor vendor in Model)
+    {
+      
+      <li><h3><a href="/vendors/@vendor.Id">@vendor.VendorName</a></h3></li>
+      <li><p>Address: @vendor.VendorAddress</p></li>
+    }
+  </ul>  
   <br>
 </div>  
